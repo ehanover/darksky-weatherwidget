@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/ll_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWidgetBackground"
+    android:padding="@dimen/widget1_margin" >
+
+
+    <GridView
+        android:id="@+id/gridview_days"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="8" />
+
+    <TextView
+        android:id="@+id/textview_updatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="18"
+        android:text="Last updated 00:00"
+        android:fontFamily="@font/font1"
+
+        android:layout_alignParentStart="true"
+        android:layout_above="@id/textview_location" />
+
+    <TextView
+        android:id="@+id/textview_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:text="1234, 5678"
+        android:fontFamily="@font/font1"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+
+    <ImageView
+        android:id="@+id/imageview_tap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@android:color/transparent" />
+
+    <!--<Button-->
+        <!--android:id="@+id/button_refresh"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Refresh"-->
+        <!--android:fontFamily="@font/font1"-->
+
+        <!--android:layout_marginTop="0dp"-->
+        <!--android:layout_marginBottom="0dp"-->
+        <!--android:minWidth="1dp"-->
+        <!--android:minHeight="1dp"-->
+
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignBottom="@id/textview_updatetime"/>-->
+
+
+
+</RelativeLayout>
+
+<!-- android:layout_below="@+id/listview_days"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+
+         android:layout_below="@+id/listview_days"
+        android:layout_alignParentEnd="true"-->
+
+
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/ll_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWidgetBackground"
+    android:orientation="vertical"
+    android:padding="@dimen/widget_margin">
+
+
+    <ListView
+        android:id="@+id/listview_days"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/textview_updatetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="Last updated 00:00"
+
+        android:fontFamily="@font/font1"/>
+
+    <Button
+        android:id="@+id/button_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Refresh" />
+
+
+
+
+
+</LinearLayout> -->

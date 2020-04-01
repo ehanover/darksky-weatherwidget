@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#357cbb</color>
+    <color name="colorPrimaryDark">#044986</color>
+    <!--<color name="colorAccent">#D81B60</color>-->
+    <color name="colorAccent">#e667e6</color>
+
+    <color name="colorWidgetBackground">#5dacf1</color>
+    <color name="colorHighlightText">#1662a4</color>
+    <color name="colorHighPrecipIntensity">#114069</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+
+</resources>

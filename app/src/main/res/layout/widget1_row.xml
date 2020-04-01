@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- android:layout_marginBottom="3dp" in relative layout -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_rl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:paddingTop="@dimen/widget1_row_padding_vertical"
+    android:layout_marginBottom="@dimen/widget1_row_padding_vertical" >
+
+    <!-- <ImageView
+        android:id="@+id/row_imageview_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@color/colorAccent" /> -->
+
+    <LinearLayout
+        android:id="@+id/row_ll_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/widget1_row_ll_padding_edges"
+        android:paddingRight="@dimen/widget1_row_ll_padding_edges" >
+
+        <TextView
+            android:id="@+id/row_textview_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/widget1_row_padding_item"
+            android:gravity="center_vertical"
+
+            android:text="Mon 99"
+            android:fontFamily="@font/font1"
+            android:textSize="@dimen/widget1_font_date"
+            android:textColor="@color/black" /> <!-- android:paddingEnd="@dimen/widget1_row_padding_item" -->
+
+        <TextView
+            android:id="@+id/row_textview_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/widget1_row_padding_item"
+            android:gravity="center_vertical"
+
+            android:text="99°"
+            android:fontFamily="@font/font1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/widget1_font_small"/> <!-- android:layout_weight="1" -->
+
+        <ImageView
+            android:id="@+id/row_imageview_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/widget1_row_padding_item"
+            android:layout_marginTop="@dimen/widget1_row_padding_item"
+            android:scaleType="fitXY"
+            android:src="@color/black"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center" > <!-- clouds -->
+
+            <ImageView
+                android:layout_width="@dimen/widget1_row_icon"
+                android:layout_height="@dimen/widget1_row_icon"
+
+                android:src="@drawable/cloud"
+                android:scaleType="fitCenter"
+                android:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/row_textview_cloud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="2dp"
+                android:gravity="center"
+
+                android:fontFamily="@font/font1"
+                android:text="cldc"
+                android:textColor="@color/colorHighlightText"
+                android:textSize="@dimen/widget1_font_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/widget1_row_padding_item"
+            android:orientation="horizontal"
+            android:gravity="center" > <!-- rain -->
+
+            <ImageView
+                android:layout_width="@dimen/widget1_row_icon"
+                android:layout_height="@dimen/widget1_row_icon"
+
+                android:src="@drawable/rain"
+                android:scaleType="fitCenter"
+                android:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/row_textview_precip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="2dp"
+                android:gravity="center"
+
+                android:fontFamily="@font/font1"
+                android:text="prcp"
+                android:textColor="@color/colorHighlightText"
+                android:textSize="@dimen/widget1_font_small" /> <!-- android:paddingEnd="@dimen/widget1_row_padding_item" android:gravity="center_vertical" android:layout_weight="1" -->
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+<!--
+            android:paddingTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_layout_marginBottom="0dp"
+
+            android:layout_gravity="top"
+            android:minHeight="0dp"
+            android:minWidth="0dp" -->
+
+
+<!-- <?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_ll_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWidgetListBackground"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/widget_margin" >
+
+    <TextView
+        android:id="@+id/row_textview_date"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="11/32"
+        android:paddingEnd="@dimen/widget1_row_padding_item"
+
+        android:fontFamily="@font/font1"
+        android:textColor="@color/colorWidgetText" />
+
+    <TextView
+        android:id="@+id/row_textview_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="88°"
+        android:paddingEnd="@dimen/widget1_row_padding_item"
+
+        android:fontFamily="@font/font1"
+        android:textColor="@color/colorWidgetText" />
+
+    <TextView
+        android:id="@+id/row_textview_cloud"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="99%"
+        android:paddingEnd="@dimen/widget1_row_padding_item"
+
+        android:fontFamily="@font/font1"
+        android:textColor="@color/colorWidgetText" />
+
+    <TextView
+        android:id="@+id/row_textview_precip"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="12 in."
+        android:paddingEnd="@dimen/widget1_row_padding_item"
+
+        android:fontFamily="@font/font1"
+        android:textColor="@color/colorWidgetText" />
+
+    <TextView
+        android:id="@+id/row_textview_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="partly cloudy"
+
+        android:fontFamily="@font/font1"
+        android:textColor="@color/colorWidgetText" />
+
+
+</LinearLayout>
+-->
+
+
