@@ -1,7 +1,6 @@
-package com.example.ethan.darkskywidget;
+package com.github.ehanover.weatherwidget_darksky;
 
 import android.content.Intent;
-import android.util.Log;
 import android.widget.RemoteViewsService;
 
 public class Widget1Service extends RemoteViewsService {

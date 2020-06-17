@@ -1,4 +1,6 @@
-package com.example.ethan.darkskywidget;
+package com.github.ehanover.weatherwidget_darksky;
+
+import com.github.ehanover.weatherwidget_darkskywidget.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

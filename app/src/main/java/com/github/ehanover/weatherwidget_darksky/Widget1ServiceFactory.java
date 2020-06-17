@@ -1,38 +1,27 @@
-package com.example.ethan.darkskywidget;
+package com.github.ehanover.weatherwidget_darksky;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.nfc.Tag;
 import android.support.v4.content.ContextCompat;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
+
+import com.github.ehanover.weatherwidget_darkskywidget.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
-import top.defaults.drawabletoolbox.DrawableBuilder;
-
 //https://github.com/commonsguy/cw-advandroid/blob/master/AppWidget/LoremWidget/src/com/commonsware/android/appwidget/lorem/LoremViewsFactory.java
 public class Widget1ServiceFactory implements RemoteViewsService.RemoteViewsFactory {
-    static String LOG = "ASDF";
+    final static String LOG = "ASDF";
+    final static String PACKAGE = "com.github.ehanover.weatherwidget_darksky";
 
     static Map<String, Integer> iconNamesToR;
 
@@ -87,7 +76,7 @@ public class Widget1ServiceFactory implements RemoteViewsService.RemoteViewsFact
     public void onDataSetChanged() {
         try {
             // Log.d(LOG, "onDataSetChanged() starting");
-            SharedPreferences prefs = context.getSharedPreferences("com.example.ethan.darkskywidget", Context.MODE_PRIVATE);
+            SharedPreferences prefs = context.getSharedPreferences(PACKAGE, Context.MODE_PRIVATE);
             location = prefs.getString("location", "").replace(" ", "").replace("°", "");
             key = prefs.getString("key", "");
             numItems = prefs.getInt("days", 8);

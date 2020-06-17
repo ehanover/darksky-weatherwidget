@@ -1,4 +1,4 @@
-package com.example.ethan.darkskywidget;
+package com.github.ehanover.weatherwidget_darksky;
 
 import android.os.AsyncTask;
 import android.util.Log;

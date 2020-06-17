@@ -1,4 +1,4 @@
-package com.example.ethan.darkskywidget;
+package com.github.ehanover.weatherwidget_darksky;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -11,12 +11,15 @@ import android.net.Uri;
 import android.util.Log;
 import android.widget.RemoteViews;
 
+import com.github.ehanover.weatherwidget_darkskywidget.R;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 public class Widget1Provider extends AppWidgetProvider { // from https://www.androidauthority.com/create-simple-android-widget-608975/
-    private String LOG = "ASDF";
+    final static String LOG = "ASDF";
+    final static String PACKAGE = "com.github.ehanover.weatherwidget_darksky";
 
     static SimpleDateFormat sdfUpdated = new SimpleDateFormat("HH:mm", Locale.ENGLISH);
 
@@ -58,7 +61,7 @@ public class Widget1Provider extends AppWidgetProvider { // from https://www.and
             remoteViews.setOnClickPendingIntent(R.id.imageview_tap, pendingIntent);
 
             // Changes to the widget, but not changes to the widget gridview elements
-            SharedPreferences prefs = context.getSharedPreferences("com.example.ethan.darkskywidget", Context.MODE_PRIVATE);
+            SharedPreferences prefs = context.getSharedPreferences(PACKAGE, Context.MODE_PRIVATE);
             boolean shouldShowInfo = prefs.getBoolean("info", true);
             boolean isApparentTemp = prefs.getBoolean("apparent", false); // Show an asterisk if the temperature is apparent and not actual
             if(shouldShowInfo) {

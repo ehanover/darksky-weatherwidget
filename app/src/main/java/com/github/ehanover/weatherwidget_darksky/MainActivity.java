@@ -1,4 +1,4 @@
-package com.example.ethan.darkskywidget;
+package com.github.ehanover.weatherwidget_darksky;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -12,9 +12,12 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.github.ehanover.weatherwidget_darkskywidget.R;
+
 
 public class MainActivity extends AppCompatActivity { // TODO: add fields for timezone?
-    static String LOG = "ASDF";
+    final static String LOG = "ASDF";
+    final static String PACKAGE = "com.github.ehanover.weatherwidget_darksky";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +27,7 @@ public class MainActivity extends AppCompatActivity { // TODO: add fields for ti
         TextView textView = findViewById(R.id.main_textview_attribution);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
 
-        SharedPreferences prefs = getSharedPreferences("com.example.ethan.darkskywidget", Context.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences(PACKAGE, Context.MODE_PRIVATE);
 
         final EditText key = findViewById(R.id.main_edittext_key);
         String k = prefs.getString("key", "none");
@@ -49,7 +52,7 @@ public class MainActivity extends AppCompatActivity { // TODO: add fields for ti
         Button save = findViewById(R.id.main_button_save);
         save.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                SharedPreferences prefs = getSharedPreferences("com.example.ethan.darkskywidget", Context.MODE_PRIVATE);
+                SharedPreferences prefs = getSharedPreferences(PACKAGE, Context.MODE_PRIVATE);
                 SharedPreferences.Editor edit = prefs.edit();
                 edit.putString("key", key.getText().toString());
                 edit.putString("location", location.getText().toString());
