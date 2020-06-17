@@ -5,6 +5,6 @@ This is an Android widget that displays data from the Dark Sky API. The user mus
 *Note: the Dark Sky API could be changing soon: 
 "Our API service for existing customers is not changing today, but we will no longer accept new signups. The API will continue to function through the end of 2021." (3/31/2020)*
 
-![Widget screenshot](screenshot.png)
+<img src="screenshot.png" alt="drawing" width="200"/>
 
 [Powered by Dark Sky](https://darksky.net/poweredby/ "Powered by Dark Sky")
